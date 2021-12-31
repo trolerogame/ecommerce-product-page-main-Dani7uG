@@ -1,4 +1,4 @@
-var y=Object.defineProperty;var u=Object.getOwnPropertySymbols;var C=Object.prototype.hasOwnProperty,k=Object.prototype.propertyIsEnumerable;var f=(e,t,n)=>t in e?y(e,t,{enumerable:!0,configurable:!0,writable:!0,value:n}):e[t]=n,h=(e,t)=>{for(var n in t||(t={}))C.call(t,n)&&f(e,n,t[n]);if(u)for(var n of u(t))k.call(t,n)&&f(e,n,t[n]);return e};import{s,W as j,j as g,r as l,a as S,R as z,b as M}from"./vendor.0809a557.js";const L=function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const r of document.querySelectorAll('link[rel="modulepreload"]'))d(r);new MutationObserver(r=>{for(const a of r)if(a.type==="childList")for(const c of a.addedNodes)c.tagName==="LINK"&&c.rel==="modulepreload"&&d(c)}).observe(document,{childList:!0,subtree:!0});function n(r){const a={};return r.integrity&&(a.integrity=r.integrity),r.referrerpolicy&&(a.referrerPolicy=r.referrerpolicy),r.crossorigin==="use-credentials"?a.credentials="include":r.crossorigin==="anonymous"?a.credentials="omit":a.credentials="same-origin",a}function d(r){if(r.ep)return;r.ep=!0;const a=n(r);fetch(r.href,a)}};L();var $="/ecommerce-product-page-main-Dani7uG/assets/image-avatar.88751761.png",b="/ecommerce-product-page-main-Dani7uG/assets/icon-cart.987a9f06.svg",I="/ecommerce-product-page-main-Dani7uG/assets/logo.5efe6b0e.svg",D="/ecommerce-product-page-main-Dani7uG/assets/icon-menu.cd0a0bcb.svg",P="/ecommerce-product-page-main-Dani7uG/assets/icon-close.22a11be2.svg";const E=s.div`
+var y=Object.defineProperty;var u=Object.getOwnPropertySymbols;var C=Object.prototype.hasOwnProperty,k=Object.prototype.propertyIsEnumerable;var f=(i,t,n)=>t in i?y(i,t,{enumerable:!0,configurable:!0,writable:!0,value:n}):i[t]=n,h=(i,t)=>{for(var n in t||(t={}))C.call(t,n)&&f(i,n,t[n]);if(u)for(var n of u(t))k.call(t,n)&&f(i,n,t[n]);return i};import{s,W as j,C as S,j as g,r as l,a as z,R as $,b as M}from"./vendor.64ecd57f.js";const L=function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const r of document.querySelectorAll('link[rel="modulepreload"]'))d(r);new MutationObserver(r=>{for(const a of r)if(a.type==="childList")for(const c of a.addedNodes)c.tagName==="LINK"&&c.rel==="modulepreload"&&d(c)}).observe(document,{childList:!0,subtree:!0});function n(r){const a={};return r.integrity&&(a.integrity=r.integrity),r.referrerpolicy&&(a.referrerPolicy=r.referrerpolicy),r.crossorigin==="use-credentials"?a.credentials="include":r.crossorigin==="anonymous"?a.credentials="omit":a.credentials="same-origin",a}function d(r){if(r.ep)return;r.ep=!0;const a=n(r);fetch(r.href,a)}};L();var I="/ecommerce-product-page-main-Dani7uG/assets/image-avatar.88751761.png",b="/ecommerce-product-page-main-Dani7uG/assets/icon-cart.987a9f06.svg",D="/ecommerce-product-page-main-Dani7uG/assets/logo.5efe6b0e.svg",P="/ecommerce-product-page-main-Dani7uG/assets/icon-menu.cd0a0bcb.svg",E="/ecommerce-product-page-main-Dani7uG/assets/icon-close.22a11be2.svg";const G=s.div`
     position: absolute;
     width:330px;
     height: 200px;
@@ -44,7 +44,7 @@ var y=Object.defineProperty;var u=Object.getOwnPropertySymbols;var C=Object.prot
         left:unset;
         right: -160px;
     }
-`,G=s.div`
+`,N=s.div`
     display:flex;
     justify-content:space-between;
     padding:0px 15px;
@@ -52,7 +52,7 @@ var y=Object.defineProperty;var u=Object.getOwnPropertySymbols;var C=Object.prot
     p{
         margin:5px 0;
     }
-`,N=s.p`
+`,A=s.p`
     text-align:center;
     margin:0;
     font-weight: bold;
@@ -61,7 +61,7 @@ var y=Object.defineProperty;var u=Object.getOwnPropertySymbols;var C=Object.prot
     width: 100%;
     display:flex;
     justify-content: center;
-`,A=j`
+`,R=j`
     html{
         margin: auto;
         max-width:150ch;
@@ -83,7 +83,7 @@ var y=Object.defineProperty;var u=Object.getOwnPropertySymbols;var C=Object.prot
         margin-top:150px;
         gap: 120px;
     }
-`,R=s.div`
+`,O=s.div`
     width: 100%;
     height: 350px;
     margin-top:30px;
@@ -113,15 +113,28 @@ var y=Object.defineProperty;var u=Object.getOwnPropertySymbols;var C=Object.prot
     }
     @media (min-width: 762px) {
         .arrow{
-            display:none;
+            display:${i=>i.modal?"block":"none"};
+            
         }
+        ${i=>i.modal&&S`
+            .arrow:first-child {
+                left:-18px;
+            }    
+            .arrow:nth-child(2) {
+                right:-18px;
+            }
+            .arrow{
+                top:250px;
+            }
+
+        `}
         .image{
             height:500px;
             border-radius:30px;
             cursor: pointer;
         }
     }
-`,O=s.div`
+`,W=s.div`
     padding:60px 30px 15px 30px;
     b{
         color:hsl(26, 100%, 55%);
@@ -146,7 +159,7 @@ var y=Object.defineProperty;var u=Object.getOwnPropertySymbols;var C=Object.prot
             font-size:20px;
         }
     }
-`,W=s.div`
+`,B=s.div`
     display:flex;
     justify-content: space-between;
     margin-top:30px;
@@ -181,7 +194,7 @@ var y=Object.defineProperty;var u=Object.getOwnPropertySymbols;var C=Object.prot
             font-size:30px!important;
         }
     }
-`,B=s.div`
+`,H=s.div`
     @media (min-width: 762px) {
         display:grid;
         grid-template-columns: 35% 65%;
@@ -189,7 +202,7 @@ var y=Object.defineProperty;var u=Object.getOwnPropertySymbols;var C=Object.prot
         grid-gap:20px;
         margin-top:20px;
     }
-`,H=s.div`
+`,Y=s.div`
     display:flex;
     justify-content:space-between;
     align-items: center;
@@ -233,14 +246,14 @@ var y=Object.defineProperty;var u=Object.getOwnPropertySymbols;var C=Object.prot
         width: calc(100% - 20px);
         margin-right: 20px;
     }
-`,Y=s.div`
+`,_=s.div`
     width: 100%;
     @media (min-width: 762px) {
         height: 700px;
         display:flex;
         flex-direction: column;
     }
-`,_=s.div`
+`,q=s.div`
     display:none;
     @media (min-width: 762px){
         width: 100%;
@@ -260,7 +273,7 @@ var y=Object.defineProperty;var u=Object.getOwnPropertySymbols;var C=Object.prot
             opacity:.5;
         }
     }
-`,i=g.exports.jsx,o=g.exports.jsxs,x=g.exports.Fragment,q=({cart:e,setCart:t})=>o(E,{children:[i("div",{id:"cart_title",children:i("p",{children:"Cart"})}),e?o(x,{children:[o(G,{children:[i("img",{src:"./image-product-1-thumbnail.jpg",alt:""}),o("div",{children:[i("p",{children:"Fall Limited Edition Sneakers"}),o("div",{children:[o("span",{children:["$125.00 x ",e]}),o("b",{children:["$",125*e,".00"]})]})]}),i("img",{src:"../../public/icon-delete.svg",alt:"",onClick:()=>t(0)})]}),i(w,{children:"Checkout"})]}):i(N,{children:"Your cart is empty"})]}),K=s.header`
+`,e=g.exports.jsx,o=g.exports.jsxs,x=g.exports.Fragment,K=({cart:i,setCart:t})=>o(G,{children:[e("div",{id:"cart_title",children:e("p",{children:"Cart"})}),i?o(x,{children:[o(N,{children:[e("img",{src:"./image-product-1-thumbnail.jpg",alt:""}),o("div",{children:[e("p",{children:"Fall Limited Edition Sneakers"}),o("div",{children:[o("span",{children:["$125.00 x ",i]}),o("b",{children:["$",125*i,".00"]})]})]}),e("img",{src:"./icon-delete.svg",alt:"",onClick:()=>t(0)})]}),e(w,{children:"Checkout"})]}):e(A,{children:"Your cart is empty"})]}),Q=s.header`
     display:flex;
     justify-content:space-between;
     width: 100%;
@@ -289,17 +302,17 @@ var y=Object.defineProperty;var u=Object.getOwnPropertySymbols;var C=Object.prot
             height:20px;
         }
     }
-`,Q=s.div`
+`,T=s.div`
     position:fixed;
     width:100%;
     height:100vh;
     top:0;
     left:0;
-    z-index:${e=>e.close?"2":"-1"};
-    background-color:${e=>e.close?"rgba(0,0,0,0.5)":"none"};
+    z-index:${i=>i.close?"2":"-1"};
+    background-color:${i=>i.close?"rgba(0,0,0,0.5)":"none"};
     transition: all .22s ease-out;
     #slide{
-        width:${e=>e.close?"60%":"0"};
+        width:${i=>i.close?"60%":"0"};
         overflow: hidden;
         height:100vh;
         background-color:#fff;
@@ -357,7 +370,7 @@ var y=Object.defineProperty;var u=Object.getOwnPropertySymbols;var C=Object.prot
             }
         }
     }
-`,T=s.div`
+`,X=s.div`
     display: flex;
     align-items: center;
     /* position: relative; */
@@ -371,11 +384,11 @@ var y=Object.defineProperty;var u=Object.getOwnPropertySymbols;var C=Object.prot
         position:relative;      
     }
     #cart::after{
-        content:'${e=>e.cart}';
+        content:'${i=>i.cart}';
         color:#fff;
         font-size:12px;
         font-weight: bold;
-        display:${e=>e.cart?"flex":"none"};
+        display:${i=>i.cart?"flex":"none"};
         align-items: center;
         justify-content: center;
         width:20px;
@@ -390,7 +403,7 @@ var y=Object.defineProperty;var u=Object.getOwnPropertySymbols;var C=Object.prot
         width:25px;
         height:25px;
     }
-`,X=({cart:e,setCart:t,openCart:n,setOpenCart:d})=>{const[r,a]=l.exports.useState(!1);return o(K,{children:[o("div",{id:"infoCard",children:[i("img",{src:D,id:"Menu",onClick:()=>a(!0)}),i("img",{src:I,alt:"",id:"logo"}),i(Q,{close:r,children:o("div",{id:"slide",children:[i("img",{src:P,id:"close",onClick:()=>a(!1)}),["Collections","Men","Women","About","Contact"].map((c,p)=>i("p",{children:c},p))]})})]}),o(T,{cart:e,children:[i("div",{id:"cart",children:i("img",{src:b,alt:"",onClick:()=>d(!n)})}),i("img",{src:$,alt:"",id:"avatar",onClick:()=>d(!n)}),n&&i(q,{cart:e,setCart:t,setOpenCart:d})]})]})},Z=s.div`
+`,Z=({cart:i,setCart:t,openCart:n,setOpenCart:d})=>{const[r,a]=l.exports.useState(!1);return o(Q,{children:[o("div",{id:"infoCard",children:[e("img",{src:P,id:"Menu",onClick:()=>a(!0)}),e("img",{src:D,alt:"",id:"logo"}),e(T,{close:r,children:o("div",{id:"slide",children:[e("img",{src:E,id:"close",onClick:()=>a(!1)}),["Collections","Men","Women","About","Contact"].map((c,p)=>e("p",{children:c},p))]})})]}),o(X,{cart:i,children:[e("div",{id:"cart",children:e("img",{src:b,alt:"",onClick:()=>d(!n)})}),e("img",{src:I,alt:"",id:"avatar",onClick:()=>d(!n)}),n&&e(K,{cart:i,setCart:t,setOpenCart:d})]})]})},J=s.div`
     position: fixed;
     left: 0;
     top: 0;
@@ -413,4 +426,4 @@ var y=Object.defineProperty;var u=Object.getOwnPropertySymbols;var C=Object.prot
     }
 
 
-`,J=({setImage:e})=>i(_,{children:[1,2,3,4].map(t=>i("img",{src:`./image-product-${t}-thumbnail.jpg`,onClick:()=>e(+t)},t))}),v=({image:e,setImage:t,setModal:n})=>o(Y,{children:[o(R,{num:`${e}`,children:[i("img",{src:"./icon-previous.svg",className:"arrow",alt:"icon-Minus",onClick:()=>e>1&&t(e-1)}),i("img",{src:"./icon-next.svg",className:"arrow",alt:"icon-Plus",onClick:()=>e<4&&t(e+1)}),i("img",{className:"image",src:`./image-product-${e}.jpg`,onClick:()=>window.innerWidth>762&&n&&n(!0)})]}),i(J,{setImage:t})]});var U=({color:e,setModal:t})=>i("svg",{onClick:()=>t(!1),id:"close",width:"14",height:"15",xmlns:"http://www.w3.org/2000/svg",children:i("path",{d:"m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z",fill:e||"#69707D","fill-rule":"evenodd"})});const V=({setModal:e})=>{const[t,n]=l.exports.useState(1);return i(x,{children:S.exports.createPortal(i(Z,{children:o("div",{id:"contain",children:[i(U,{color:"#fff",setModal:e}),i(v,{setImage:n,image:t})]})}),document.getElementById("portal"))})};var ii="/ecommerce-product-page-main-Dani7uG/assets/icon-minus.7f289c13.svg",ei="/ecommerce-product-page-main-Dani7uG/assets/icon-plus.fd8d372c.svg";const ti=({cart:e,setCart:t,setOpenCart:n})=>{const[d,r]=l.exports.useState(1),[a,c]=l.exports.useState(0),[p,m]=l.exports.useState(!1);return o(F,{children:[i(v,{image:d,setImage:r,setModal:m}),o(O,{children:[i("b",{children:"SNEAKER COMPANY"}),i("h2",{children:"Fall Limited Edition Sneakers"}),i("p",{children:"These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber oter sole they'll withstand everything the weather can offer."}),o(W,{children:[o("div",{children:[i("p",{children:"$125.00"}),i("span",{children:"50%"})]}),i("p",{children:"$250.00"})]}),o(B,{children:[o(H,{children:[i("img",{src:ii,alt:"",onClick:()=>a&&c(a-1)}),i("p",{children:a}),i("img",{src:ei,alt:"",onClick:()=>c(a+1)})]}),o(w,{onClick:()=>e!==a&&[t(a),n(!1)],children:[i("img",{src:b,alt:""}),"Add to cart"]})]}),window.innerWidth>762&&p&&i(V,{setModal:m})]})]})};function ni(){const[e,t]=l.exports.useState(0),[n,d]=l.exports.useState(!1),r={cart:e,setCart:t,openCart:n,setOpenCart:d};return o(x,{children:[i(A,{}),o("div",{children:[i(X,h({},r)),i(ti,h({},r))]})]})}z.render(i(M.StrictMode,{children:i(ni,{})}),document.getElementById("root"));
+`,U=({setImage:i})=>e(q,{children:[1,2,3,4].map(t=>e("img",{src:`./image-product-${t}-thumbnail.jpg`,onClick:()=>i(+t)},t))}),v=({image:i,setImage:t,setModal:n,modal:d})=>o(_,{children:[o(O,{num:`${i}`,modal:d,children:[e("img",{src:"./icon-previous.svg",className:"arrow",alt:"icon-Minus",onClick:()=>i>1&&t(i-1)}),e("img",{src:"./icon-next.svg",className:"arrow",alt:"icon-Plus",onClick:()=>i<4&&t(i+1)}),e("img",{className:"image",src:`./image-product-${i}.jpg`,onClick:()=>window.innerWidth>762&&n&&n(!0)})]}),e(U,{setImage:t})]});var V=({color:i,setModal:t})=>e("svg",{onClick:()=>t(!1),id:"close",width:"14",height:"15",xmlns:"http://www.w3.org/2000/svg",children:e("path",{d:"m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z",fill:i||"#69707D",fillRule:"evenodd"})});const ii=({setModal:i})=>{const[t,n]=l.exports.useState(1);return e(x,{children:z.exports.createPortal(e(J,{children:o("div",{id:"contain",children:[e(V,{color:"#fff",setModal:i}),e(v,{modal:!0,setImage:n,image:t})]})}),document.getElementById("portal"))})};var ei="/ecommerce-product-page-main-Dani7uG/assets/icon-minus.7f289c13.svg",ti="/ecommerce-product-page-main-Dani7uG/assets/icon-plus.fd8d372c.svg";const ni=({cart:i,setCart:t,setOpenCart:n})=>{const[d,r]=l.exports.useState(1),[a,c]=l.exports.useState(0),[p,m]=l.exports.useState(!1);return o(F,{children:[e(v,{image:d,setImage:r,setModal:m}),o(W,{children:[e("b",{children:"SNEAKER COMPANY"}),e("h2",{children:"Fall Limited Edition Sneakers"}),e("p",{children:"These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber oter sole they'll withstand everything the weather can offer."}),o(B,{children:[o("div",{children:[e("p",{children:"$125.00"}),e("span",{children:"50%"})]}),e("p",{children:"$250.00"})]}),o(H,{children:[o(Y,{children:[e("img",{src:ei,alt:"",onClick:()=>a&&c(a-1)}),e("p",{children:a}),e("img",{src:ti,alt:"",onClick:()=>c(a+1)})]}),o(w,{onClick:()=>i!==a&&[t(a),n(!1)],children:[e("img",{src:b,alt:""}),"Add to cart"]})]}),window.innerWidth>762&&p&&e(ii,{setModal:m})]})]})};function oi(){const[i,t]=l.exports.useState(0),[n,d]=l.exports.useState(!1),r={cart:i,setCart:t,openCart:n,setOpenCart:d};return o(x,{children:[e(R,{}),o("div",{children:[e(Z,h({},r)),e(ni,h({},r))]})]})}$.render(e(M.StrictMode,{children:e(oi,{})}),document.getElementById("root"));
