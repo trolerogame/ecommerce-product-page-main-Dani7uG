@@ -11,7 +11,7 @@ const Modal = ({setModal}) => {
                 <ModalStyle>
                     <div id='contain'>
                         <IconClose color={'#fff'} setModal={setModal}/>
-                        <ImgProduct setImage={setImage} image={image} />
+                        <ImgProduct modal setImage={setImage} image={image} />
                     </div>
                 </ModalStyle>
             ,document.getElementById('portal')

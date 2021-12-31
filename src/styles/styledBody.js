@@ -1,4 +1,4 @@
-import styled,{createGlobalStyle} from 'styled-components'
+import styled,{createGlobalStyle,css} from 'styled-components'
 
 
 export const StyleGlobal = createGlobalStyle`
@@ -58,8 +58,21 @@ export const ImageContain = styled.div`
     }
     @media (min-width: 762px) {
         .arrow{
-            display:none;
+            display:${props => props.modal ? 'block' : 'none'};
+            
         }
+        ${props => props.modal && css`
+            .arrow:first-child {
+                left:-18px;
+            }    
+            .arrow:nth-child(2) {
+                right:-18px;
+            }
+            .arrow{
+                top:250px;
+            }
+
+        `}
         .image{
             height:500px;
             border-radius:30px;

@@ -18,7 +18,7 @@ const Cart = ({cart,setCart}) => {
                                 <b>{`$`}{125 * cart}.00</b>
                             </div>
                         </div>
-                        <img src='../../public/icon-delete.svg' alt="" onClick={() => setCart(0)}/>
+                        <img src='./icon-delete.svg' alt="" onClick={() => setCart(0)}/>
                     </ContainProduct>
                     <AddCart>Checkout</AddCart>
                 </>
