@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import avatar from './image-avatar.png'
+import avatar from '../../public/image-avatar.png'
 import iconCart from './icon-cart.svg'
 import logo from './logo.svg'
 import iconMenu from './icon-menu.svg'
