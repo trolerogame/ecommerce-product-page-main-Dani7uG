@@ -1,11 +1,9 @@
 import React,{useState} from 'react'
 import Modal from './Modal'
 import ImgProduct from './ImgProduct'
-import iconNext from '../../public/icon-next.svg'
-import iconPrevious from '../../public/icon-previous.svg'
-import iconMinus from '../../public/icon-minus.svg'
-import iconPlus from '../../public/icon-plus.svg'
-import iconCart from '../../public/icon-cart.svg'
+import iconMinus from './icon-minus.svg'
+import iconPlus from './icon-plus.svg'
+import iconCart from './icon-cart.svg'
 import { ContainInfoImage,Prices,Count,AddCart,Main,ContainCount } from '../styles/styledBody'
 const Body = ({cart,setCart,setOpenCart}) => {
     const [image,setImage] = useState(1)

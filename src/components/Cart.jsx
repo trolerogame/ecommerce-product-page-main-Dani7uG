@@ -10,7 +10,7 @@ const Cart = ({cart,setCart}) => {
             {cart ? 
                 <>
                     <ContainProduct>
-                        <img src='../../public/image-product-1-thumbnail.jpg' alt="" />
+                        <img src='./image-product-1-thumbnail.jpg' alt="" />
                         <div>
                             <p>Fall Limited Edition Sneakers</p>
                             <div>
@@ -18,7 +18,7 @@ const Cart = ({cart,setCart}) => {
                                 <b>{`$`}{125 * cart}.00</b>
                             </div>
                         </div>
-                        <img src='../../public/icon-delete.svg' alt="" onClick={() => setCart(0)}/>
+                        <img src='./icon-delete.svg' alt="" onClick={() => setCart(0)}/>
                     </ContainProduct>
                     <AddCart>Checkout</AddCart>
                 </>

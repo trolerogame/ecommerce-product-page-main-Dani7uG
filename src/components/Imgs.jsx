@@ -5,7 +5,7 @@ const Imgs = ({setImage}) => {
         <ImgsStyle>
             {[1,2,3,4].map(elem => 
                 <img 
-                    src={`../../public/image-product-${elem}-thumbnail.jpg`} 
+                    src={`./image-product-${elem}-thumbnail.jpg`} 
                     key={elem}
                     onClick={() => setImage(+elem)}
                 />
