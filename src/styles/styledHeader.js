@@ -2,36 +2,29 @@ import styled from 'styled-components'
 
 
 export const HeaderStyle = styled.header`
-    display: flex;
-    justify-content: center;
-    background-color: #fff;
+    display:flex;
+    justify-content:space-between;
+    width: 100%;
+    padding:0px 30px 0 30px;
     height:60px;
-    margin:0px -20px;
+    margin:0 -30px;
+    position:relative;
     img{
         margin:0 8px;
         cursor:pointer;
     }
-    #containHeader{
-        display:flex;
-        justify-content:space-between;
-        width: 100%;
-        max-width: 1000px;
-        padding:20px 30px 0 30px;
-        height:100%;
-    }
     #infoCard{
-            display:flex;
-            align-items:center;
-        }
+        display:flex;
+        align-items: center;
+    }
     @media (min-width: 762px) {
-        #containHeader{
-            border-bottom:4px solid hsl(223, 64%, 98%);
-            padding:0;
-            padding-top:20px;
-        }
+        border-bottom:4px solid hsl(223, 64%, 98%);
+        padding:0;
+        margin:0;
         #Menu,#close{
             display:none;
         }
+        
         #logo{
             width:140px;
             height:20px;
@@ -76,6 +69,7 @@ export const ContainSlide = styled.div`
             width:100%;
             height:auto;
             display:flex;
+            background: none;
             padding:0;
         }
         p{
@@ -111,11 +105,31 @@ export const ContainSlide = styled.div`
 export const CardHeader = styled.div`
     display: flex;
     align-items: center;
+    /* position: relative; */
     img{
         display:inline;
         object-fit: cover;
         width: 27px;
         height: 25px;
+    }
+    #cart{
+        position:relative;      
+    }
+    #cart::after{
+        content:'${props => props.cart}';
+        color:#fff;
+        font-size:12px;
+        font-weight: bold;
+        display:${props => props.cart ? 'flex' : 'none'};
+        align-items: center;
+        justify-content: center;
+        width:20px;
+        height: 15px;
+        background: orange;
+        position:absolute;
+        right:5px;
+        top:-5px;
+        border-radius:50%;
     }
     #avatar{
         width:25px;
