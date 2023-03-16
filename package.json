@@ -1,7 +1,7 @@
 {
   "name": "ecommerce-product-page-main",
   "version": "0.0.0",
-  "homepage": "https://trolegame.github.io/ecommerce-product-page-main-Dani7uG",
+  "homepage": "https://trolerogame.github.io/ecommerce-product-page-main-Dani7uG/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
